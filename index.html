@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Transkriber</title>
+  <meta name="description" content="Ta opp intervjuer og gjør lyd om til tekst, helt lokalt i nettleseren. Laget av Georg Ferdinand Nilsen.">
+  <meta name="author" content="Georg Ferdinand Nilsen">
+  <meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1c1c1e" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Transkriber">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <header class="appbar">
+    <h1 class="appbar-title">Transkriber <span class="by"><span class="dash">- </span>Laget av Georg Ferdinand Nilsen</span></h1>
+    <button class="icon-button mobile-only" type="button" data-action="open-settings" aria-label="Innstillinger">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg>
+    </button>
+  </header>
+
+  <main id="main" aria-live="polite">
+    <noscript><p>Transkriber trenger JavaScript.</p></noscript>
+  </main>
+
+  <footer class="settings-bar" id="settings-bar" aria-label="Innstillinger"></footer>
+
+  <dialog id="dialog"></dialog>
+  <input type="file" id="file-input" accept="audio/*,video/*,.m4a,.mp3,.wav,.aac,.ogg,.opus,.flac,.webm,.mp4,.mov" multiple hidden>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
